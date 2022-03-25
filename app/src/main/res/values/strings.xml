@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PTS Application</string>
+    <string name="textLogin">Login now to track all your expenses and income at a place!</string>
+
+    //facebook
+    <string name="facebook_app_id">651100056105132</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">929ce09a5e68f28091c35ad5b6c7da1f</string>
+</resources>
