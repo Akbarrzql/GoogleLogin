@@ -12,13 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.facebook.AccessToken;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
@@ -26,10 +22,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 public class ProfilActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
@@ -93,9 +85,6 @@ public class ProfilActivity extends AppCompatActivity implements GoogleApiClient
                             Toast.makeText(ProfilActivity.this, "Logout Gagal", Toast.LENGTH_SHORT).show();
                     }
                 });
-                LoginManager.getInstance().logOut();
-                startActivity(new Intent(ProfilActivity.this, MainActivity.class));
-                finish();
             }
         });
 
@@ -103,7 +92,7 @@ public class ProfilActivity extends AppCompatActivity implements GoogleApiClient
     }
 
     private void gotoMainActivity() {
-        startActivity(new Intent(ProfilActivity.this, MainActivity.class));
+        startActivity(new Intent(ProfilActivity.this, LoginActivity.class));
         finish();
     }
 
