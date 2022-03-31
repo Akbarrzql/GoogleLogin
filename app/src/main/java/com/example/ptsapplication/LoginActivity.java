@@ -45,6 +45,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+        //shared preferences
         sharedPreferences = getApplicationContext().getSharedPreferences("MyPref", 0);
         editor = sharedPreferences.edit();
 

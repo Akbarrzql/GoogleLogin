@@ -20,6 +20,11 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        //ActionBar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         sharedPreferences = getApplicationContext().getSharedPreferences("MyPref", 0);
         editor = sharedPreferences.edit();
 
@@ -42,7 +47,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
             }
-        }, 2000);
+        }, 3500);
 
     }
 }
